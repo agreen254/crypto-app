@@ -1,3 +1,5 @@
+import CoinDashboard from "@/components/CoinDashboard/CoinDashboard";
+
 type Props = {
   params: {
     id: string;
@@ -5,9 +7,7 @@ type Props = {
 };
 
 const CoinPage = ({ params: { id } }: Props) => {
-  return (
-    <h1 className="mt-4 text-center">This is a placeholder page for {id}</h1>
-  );
+  return <CoinDashboard id={id} />;
 };
 
 export default CoinPage;

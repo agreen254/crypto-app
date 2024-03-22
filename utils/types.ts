@@ -4,6 +4,8 @@ import type {
 } from "@tanstack/react-query";
 
 import {
+  coinRequestSchema,
+  coinResponseSchema,
   comparisonChartQueriesSchema,
   comparisonChartRequestSchema,
   comparisonChartResponseSchema,
@@ -39,6 +41,9 @@ export type ChartColorSet = {
   startColor: Color;
   endColor: Color;
 };
+
+export type CoinRequest = z.infer<typeof coinRequestSchema>;
+export type CoinResponse = z.infer<typeof coinResponseSchema>;
 
 export type ComparisonChartQueries = z.infer<
   typeof comparisonChartQueriesSchema

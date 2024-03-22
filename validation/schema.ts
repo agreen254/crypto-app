@@ -8,6 +8,104 @@ export const validCurrenciesSchema = z.union([
   z.literal("eth"),
 ]);
 
+export const coinRequestSchema = z.object({
+  id: z.string(),
+});
+
+export const coinResponseSchema = z.object({
+  id: z.string(),
+  symbol: z.string(),
+  name: z.string(),
+  categories: z.string().array(),
+  description: z.object({
+    en: z.string(),
+  }),
+  links: z.object({
+    homepage: z.string().array(),
+    blockchain_site: z.string().array(),
+    twitter_screen_name: z.string(),
+    subreddit_url: z.string(),
+    repos_url: z.object({
+      github: z.string().array(),
+    }),
+  }),
+  image: z.object({
+    thumb: z.string(),
+    small: z.string(),
+    large: z.string(),
+  }),
+  genesis_date: z.string(),
+  market_cap_rank: z.number(),
+  market_data: z.object({
+    current_price: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    ath: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    ath_date: z.object({
+      usd: z.string(),
+      eur: z.string(),
+      gbp: z.string(),
+      btc: z.string(),
+      eth: z.string(),
+    }),
+    atl: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    atl_date: z.object({
+      usd: z.string(),
+      eur: z.string(),
+      gbp: z.string(),
+      btc: z.string(),
+      eth: z.string(),
+    }),
+    market_cap: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    fully_diluted_valuation: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    total_volume: z.object({
+      usd: z.number(),
+      eur: z.number(),
+      gbp: z.number(),
+      btc: z.number(),
+      eth: z.number(),
+    }),
+    price_change_percentage_24h: z.number().nullable(),
+    price_change_percentage_7d: z.number().nullable(),
+    price_change_percentage_14d: z.number().nullable(),
+    price_change_percentage_30d: z.number().nullable(),
+    price_change_percentage_60d: z.number().nullable(),
+    price_change_percentage_200d: z.number().nullable(),
+    price_change_percentage_1y: z.number().nullable(),
+    market_cap_change_percentage_24h: z.number(),
+    max_supply: z.number(),
+    circulating_supply: z.number(),
+  }),
+});
+
 // each id represents a selected carousel element
 export const comparisonChartQueriesSchema = z.object({
   ids: z.string().array(),
