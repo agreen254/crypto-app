@@ -23,10 +23,10 @@ export const coinResponseSchema = z.object({
   links: z.object({
     homepage: z.string().array(),
     blockchain_site: z.string().array(),
-    twitter_screen_name: z.string(),
-    subreddit_url: z.string(),
+    twitter_screen_name: z.string().nullable(),
+    subreddit_url: z.string().nullable(),
     repos_url: z.object({
-      github: z.string().array(),
+      github: z.string().array().nullable(),
     }),
   }),
   image: z.object({
