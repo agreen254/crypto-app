@@ -1,9 +1,7 @@
 import { globalResponseSchema } from "@/validation/schema";
 import { NextRequest, NextResponse } from "next/server";
 
-// The "req" prop needs to be here, even though it isn't used, so Next will not make this a static route.
-// eslint-disable-next-line
-export async function GET(req: NextRequest) {
+export async function GET(_: NextRequest) {
   const response = await fetch("https://api.coingecko.com/api/v3/global");
   if (!response.ok) {
     return NextResponse.json(

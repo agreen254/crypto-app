@@ -16,7 +16,7 @@ export const coinResponseSchema = z.object({
   id: z.string(),
   symbol: z.string(),
   name: z.string(),
-  categories: z.string().array(),
+  categories: z.string().array().nullable(),
   description: z.object({
     en: z.string(),
   }),
@@ -34,8 +34,8 @@ export const coinResponseSchema = z.object({
     small: z.string(),
     large: z.string(),
   }),
-  genesis_date: z.string(),
-  market_cap_rank: z.number(),
+  genesis_date: z.string().nullable(),
+  market_cap_rank: z.number().nullable(),
   market_data: z.object({
     current_price: z.object({
       usd: z.number(),
@@ -101,8 +101,8 @@ export const coinResponseSchema = z.object({
     price_change_percentage_200d: z.number().nullable(),
     price_change_percentage_1y: z.number().nullable(),
     market_cap_change_percentage_24h: z.number(),
-    max_supply: z.number(),
-    circulating_supply: z.number(),
+    max_supply: z.number().nullable(),
+    circulating_supply: z.number().nullable(),
   }),
 });
 

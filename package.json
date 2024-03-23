@@ -16,6 +16,7 @@
     "chart.js": "^4.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "embla-carousel-auto-scroll": "^8.0.0",
     "embla-carousel-react": "^8.0.0-rc23",
     "fast-sort": "^3.4.0",
     "fastest-levenshtein": "^1.0.16",

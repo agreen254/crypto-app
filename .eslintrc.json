@@ -5,7 +5,12 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "no-unused-vars": "error", // Disallows unused variables and functions
+    "no-unused-vars": [
+      "error",
+      // underscores purposefully indicate var is to be ignored
+      // e.g. array.map(_ => "hi mom");
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
     "no-console": "error", // Disallows console.log statements
     "prefer-const": "error", // Disallows let if variables are not reassigned
     "quotes": ["error", "double"], // Enforces the use of double quotes over single quotes
@@ -24,4 +29,3 @@
     }
   }
 }
-
