@@ -41,7 +41,7 @@ const CoinCategoriesCarousel = ({ categories }: Props) => {
         animate={{ opacity: 100 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "easeIn", duration: 1.0 }}
-        className="max-w-[400px]"
+        className="max-w-full"
       >
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">

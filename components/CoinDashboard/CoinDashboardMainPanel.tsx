@@ -22,7 +22,7 @@ const CoinDashboardMainPanel = ({ response }: Props) => {
   } = data;
 
   return (
-    <div className="bg-zinc-900/70 border border-zinc-800 m-auto w-[400px] rounded-xl">
+    <div className="bg-zinc-900/70 border border-zinc-800 m-auto w-[564px] rounded-xl">
       <div className="flex flex-col items-center mt-14 mb-3">
         <Image
           src={logoURL}
