@@ -80,11 +80,11 @@ export const coinResponseSchema = z.object({
       eth: z.number(),
     }),
     fully_diluted_valuation: z.object({
-      usd: z.number(),
-      eur: z.number(),
-      gbp: z.number(),
-      btc: z.number(),
-      eth: z.number(),
+      usd: z.number().optional(),
+      eur: z.number().optional(),
+      gbp: z.number().optional(),
+      btc: z.number().optional(),
+      eth: z.number().optional(),
     }),
     total_volume: z.object({
       usd: z.number(),

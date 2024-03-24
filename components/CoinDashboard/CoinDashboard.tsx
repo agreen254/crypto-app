@@ -17,7 +17,7 @@ const CoinDashboard = ({ id }: Props) => {
       <div className="flex justify-center">
         <CoinDashboardMainPanel response={response} />
       </div>
-      <div>
+      <div className="flex justify-center">
         <CoinDashboardDescriptionPanel response={response} />
       </div>
     </div>
